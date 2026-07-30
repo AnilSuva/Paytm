@@ -1,0 +1,29 @@
+[33mcommit a864306188c04f3e1faafa9e16483d3d8a6a2a7c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Author: Anil Suva <suvaanil80@gmail.com>
+Date:   Thu Jul 30 17:47:47 2026 +0530
+
+    Fixed typescript error for vercel build
+
+[33mcommit a7f961baadd0fa444d35846412ac88312e58772c[m
+Author: Anil Suva <suvaanil80@gmail.com>
+Date:   Thu Jul 30 17:22:32 2026 +0530
+
+    Fixed Render build errors
+
+[33mcommit f3530a191ba8e42d5e8dfa00c9fb60d5543b5ee4[m
+Author: Anil Suva <suvaanil80@gmail.com>
+Date:   Thu Jul 30 17:19:27 2026 +0530
+
+    strict version removed in cookies
+
+[33mcommit ee2042ebbdd91b1a80d9c40d0a4e4a851cb4da7f[m
+Author: Anil Suva <suvaanil80@gmail.com>
+Date:   Thu Jul 30 16:53:30 2026 +0530
+
+    Readme file added
+
+[33mcommit 3190b1ee7cb64610f8e608fd9be3a6fee770ffd9[m
+Author: Anil Suva <suvaanil80@gmail.com>
+Date:   Thu Jul 30 16:49:36 2026 +0530
+
+    v.1
