@@ -1,0 +1,25 @@
+.Signup-shadow{
+    box-shadow: 10px 20px 70px -50px #0059B3;
+}
+
+.dashbord-navigation-border{
+    
+}
+
+/* App.css */
+@keyframes expandSearchDropdown {
+  from {
+    max-height: 0px;
+    opacity: 0;
+    overflow: hidden; /* Keeps content hidden while it expands */
+  }
+  to {
+    max-height: 250px; /* Big enough to hold your suggestions */
+    opacity: 1;
+    overflow: auto; /* Allows scrolling if there are many users */
+  }
+}
+
+.animate-search-expand {
+  animation: expandSearchDropdown 0.3s ease-out forwards;
+}
