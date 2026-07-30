@@ -3,7 +3,7 @@ import { useState } from "react";
 
 
 interface props {
-    balance? : number;
+    balance? : number | null;
     transferUser: any;
     onClose: () => void;
     onSuccess: () => void;
