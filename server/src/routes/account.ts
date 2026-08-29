@@ -117,5 +117,36 @@ router.get("/recent-contacts", authMiddleware, async(req, res)=>{
         res.status(500).json({message: "Error fetching recent contacts"});
     }
 });
+router.get("/history", authMiddleware, async (req, res) => {
+    try {
+        //@ts-ignore
+        const userId = req.userId;
+        const page = parseInt(req.query.page as string) || 1;
+        const limit = parseInt(req.query.limit as string) || 10;
+        const skip = (page - 1) * limit;
+
+        const transactions = await Transaction.find({
+            $or: [{ senderId: userId }, { receiverId: userId }]
+        })
+        .sort({ createdAt: -1 })
+        .skip(skip)
+        .limit(limit)
+        .populate('senderId', 'firstName lastName username _id')
+        .populate('receiverId', 'firstName lastName username _id');
+
+        const total = await Transaction.countDocuments({
+            $or: [{ senderId: userId }, { receiverId: userId }]
+        });
+
+        res.json({
+            transactions,
+            currentPage: page,
+            totalPages: Math.ceil(total / limit),
+            totalTransactions: total
+        });
+    } catch (e) {
+        res.status(500).json({ message: "Error fetching transaction history" });
+    }
+});
 
 export default router;

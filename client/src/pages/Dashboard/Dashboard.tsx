@@ -69,7 +69,13 @@ export default function Dashboard() {
 			<div className="dashbord-navigation-border flex justify-between w-full h-[72px] border-b border-[#D8E8F8] items-center px-[70px]">
 				<PaytmLogo />
 				<div className="w-fit flex flex-col gap-[10px] py-4 px-5">
-					<div className="w-full h-fit flex flex-nowrap items-center gap-3">
+					<div className="w-full h-fit flex flex-nowrap items-center gap-6">
+						<button 
+							onClick={() => navigate("/history")}
+							className="text-[#0F72C9] font-medium hover:underline cursor-pointer"
+						>
+							History
+						</button>
 						<div className="w-[42px] h-[42px] shrink-0 pb-[2px] bg-[#E5F2FF] text-[#0F72C9] flex justify-center items-center font-semibold rounded-full">
 							{user ? `${user.firstName[0]}${user.lastName[0]}`.toUpperCase() : "..."}
 						</div>

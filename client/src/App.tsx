@@ -3,6 +3,7 @@ import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import Dashboard from './pages/Dashboard/Dashboard'
 import Signin from './pages/Signin'
 import Signup from './pages/Signup'
+import History from './pages/History'
 
 
 import './App.css'
@@ -18,6 +19,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/signin" element={<Signin />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/history" element={<History />} />
 
           {/* Catch-all route to redirect any unknown URLs to the dashboard */}
           <Route path="*" element={<Navigate to="/dashboard" replace />} />
