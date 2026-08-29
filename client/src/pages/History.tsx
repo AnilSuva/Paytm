@@ -1,7 +1,7 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import PaytmLogo from "../../components/PaytmLogo";
+import PaytmLogo from "../components/PaytmLogo";
 import { FiArrowUpRight, FiArrowDownLeft } from "react-icons/fi";
 
 interface Transaction {
