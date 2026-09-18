@@ -66,7 +66,7 @@ export default function Dashboard() {
 		<div className="w-screen h-screen bg-[#F7FBFF] flex flex-col items-center">
 
 			{/* navbar */}
-			<div className="dashbord-navigation-border flex justify-between w-full h-[72px] border-b border-[#D8E8F8] items-center px-[70px]">
+			<div className="dashbord-navigation-border flex justify-between w-full h-[72px] border-b border-[#D8E8F8] items-center md:px-[70px] px-[20px]">
 				<PaytmLogo />
 				<div className="w-fit flex flex-col gap-[10px] py-4 px-5">
 					<div className="w-full h-fit flex flex-nowrap items-center gap-6">
@@ -76,7 +76,7 @@ export default function Dashboard() {
 						>
 							History
 						</button>
-						<div className="w-[42px] h-[42px] shrink-0 pb-[2px] bg-[#E5F2FF] text-[#0F72C9] flex justify-center items-center font-semibold rounded-full">
+						<div className="w-[42px] h-[42px] pb-[2px] bg-[#E5F2FF] text-[#0F72C9] flex justify-center items-center font-semibold rounded-full">
 							{user ? `${user.firstName[0]}${user.lastName[0]}`.toUpperCase() : "..."}
 						</div>
 
