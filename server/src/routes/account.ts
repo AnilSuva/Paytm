@@ -23,7 +23,7 @@ router.get("/balance", authMiddleware, async (req, res) => {
 
 const transferSchema = zod.object({
     to: zod.string(),
-    amount: zod.number()
+    amount: zod.number().min(0, { message: "Amount must be greater than 0" })
 });
 
 router.post("/transfer", authMiddleware, async (req, res) => {
@@ -32,6 +32,7 @@ router.post("/transfer", authMiddleware, async (req, res) => {
 
     try {
         const { amount, to } = req.body;
+        
         
         const validData = transferSchema.safeParse({ amount, to });
 
